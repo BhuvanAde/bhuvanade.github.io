@@ -28374,5 +28374,72 @@ body.servi-ce-details .rts-footer-two-area {
 }
 /*# sourceMappingURL=../maps/style.css.map */
 
+#moving-div {
+  /* background-color: red; */
+  margin-top:10vh;
+  position: absolute;
+  bottom: 30%;
+  white-space: nowrap;
+  padding: 1.2vw;
+  overflow: hidden;
+  width: 90%;
+}
+
+#moving-div .move {
+  display: inline-block;
+  animation-name: mobe;
+  animation-duration: 12s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+#moving-div .move img {
+  height: 1.8vw;
+  margin: 0 0.8vw;
+}
+
+@keyframes mobe {
+  0% {
+      transform: translateX(0);
+  }
+
+  100% {
+      transform: translateX(-100%);
+  }
+
+}
+
+#blur-left {
+  height: 100%;
+  width: 20%;
+  background: linear-gradient(to right, #111, transparent);
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+#blur-right {
+  height: 100%;
+  width: 20%;
+  background: linear-gradient(to right, transparent, #111);
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+}
+
+@media (max-width: 768px) {
+  #moving-div {
+    width: 90vw; 
+    padding: 2vw; 
+  }
+
+  #moving-div .move img {
+    height: 3vw; /* Adjusts the image size for smaller screens */
+  }
+}
+
 
 
